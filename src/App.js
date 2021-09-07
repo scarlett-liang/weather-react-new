@@ -9,7 +9,7 @@ function App() {
       </div>
       <footer className="developer">
         <a
-          href="https://github.com/scarlett-liang/weather-react"
+          href="https://github.com/scarlett-liang/weather-react-new"
           target="_blank"
           rel="noreferrer"
           className="gitLink"
