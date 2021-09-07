@@ -79,6 +79,10 @@ Form .autoButton {
   position: relative;
   top:34px;
 }
+.forecastInfo-temp-min {
+  margin-left: 5px;
+  opacity:0.6;
+}
 Form .searchButton:hover {
   background: var(--secondary-color);
   border: solid 1px var(--secondary-color);
@@ -93,4 +97,5 @@ footer {
   display: block;
   text-align: center;
   margin: 5px auto 40px auto;
+  font-size: 12px;
 }
