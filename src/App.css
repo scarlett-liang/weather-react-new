@@ -1,38 +1,96 @@
-.App {
+:root {
+  --primary-color:rgba(243, 177, 157, 0.75);
+  --secondary-color:#212529;
+}
+.container {
+  background: linear-gradient(
+    to bottom,
+    rgb(243, 177, 157, 60%),
+    rgba(133, 191, 245, 0.6)
+  );
+  display: block;
+  margin: 40px auto 0 auto;
+  padding: 30px 20px;
   text-align: center;
+  max-width: 600px;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 20px;
+  box-shadow: 1px 1px 20px #6e6e6e;
+  color: var(--secondary-color);
+}
+.Forecast input {
+  border-radius: 5px;
+}
+.App .gitLink {
+color: rgb(105, 153, 197);
+
+}
+Form .cityInfo {
+  background: #ffffff00;
+  border: solid 1px var(--secondary-color);
+  margin-right: 8px;
+}
+Form .searchButton {
+  background: #ffffff00;
+  border: solid 1px var(--secondary-color);
+  transition: all 200ms ease-in-out;
+  margin-right: 8px;
+}
+Form .autoButton {
+  background: #ffffff00;
+  border: solid 1px var(--secondary-color);
+  transition: all 200ms ease-in-out;
+}
+.Forecast h1 {
+  margin: 50px auto;
+  font-family: "Pacifico", cursive;
+  font-size: 50px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.temperature {
+  margin: 0 auto;
+  font-family: "Dancing Script", cursive;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.currentWeather {
+  text-align: left;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.unit {
+  position: relative;
+  top:-25px;
 }
-
-.App-link {
-  color: #61dafb;
+.weatherDescri {
+  margin: 20px auto;
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Forecast .row {
+  margin: 0 auto;
+}
+.Forecast .weatherDetail {
+  list-style: none;
+}
+.WeatherInfo .currentIcon {
+  position: relative;
+  top:34px;
+}
+Form .searchButton:hover {
+  background: var(--secondary-color);
+  border: solid 1px var(--secondary-color);
+  color: var(--primary-color);
+}
+Form .autoButton:hover {
+  background: var(--secondary-color);
+  border: solid 1px var(--secondary-color);
+  color: var(--primary-color);
+}
+footer {
+  display: block;
+  text-align: center;
+  margin: 5px auto 40px auto;
 }
