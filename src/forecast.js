@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import Loader from "react-loader-spinner";
 import WeatherInfo from './weatherInfo';
+import ForecastInfo from './forecastInfo';
 
 
 
@@ -17,6 +18,7 @@ export default function Forecast (props){
     setWeatherData({
     ready:true,
     city: response.data.name,
+    coord:response.data.coord,
     date: new Date(response.data.dt * 1000),
     temp: response.data.main.temp,
     wind: response.data.wind.speed,
@@ -24,7 +26,6 @@ export default function Forecast (props){
     description: response.data.weather[0].description,
     icon: response.data.weather[0].icon,
   });
-  
   }
 function search(){
     let apiKey="af52e0b61c120c6390d319d4b6e5bb13";
@@ -47,6 +48,7 @@ setCity(event.target.value);
         <input type="submit" value="Auto Locate" className="autoButton" />
       </form>
       <WeatherInfo data={weatherData} />
+      <ForecastInfo coord={weatherData.coord} />
     </div>
   );}else{
       search();
