@@ -45,7 +45,6 @@ setCity(event.target.value);
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="City name?" className="cityInfo" onChange={handleChange} autoFocus="on"/>
         <input type="submit" value="Search" className="searchButton" />
-        <input type="submit" value="Auto Locate" className="autoButton" />
       </form>
       <WeatherInfo data={weatherData} />
       <ForecastInfo coord={weatherData.coord} />
