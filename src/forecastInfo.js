@@ -1,7 +1,7 @@
 
 import './App.css';
 import axios from "axios";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ForecastDay from "./forecastDay";
 
 export default function ForecastInfo(props){
@@ -11,9 +11,11 @@ export default function ForecastInfo(props){
       setForecastDay(response.data.daily);
       setLoaded(true);
     }
+    useEffect(()=>{setLoaded(false)},[props.coord]);
     if (loaded){
         return(
-        <div className="ForecastInfo">
+        <div className="ForecastInfo d-none d-md-block">
+        <hr className="mt-2 mb-4" />
          <div className="row">
           {forecastDay.map(function(dailyForecast,index){
             if (index > 0 && index < 7){
