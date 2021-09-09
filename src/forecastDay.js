@@ -9,14 +9,10 @@ export default function ForecastDay (props){
     }
     return (
        <div className="ForecastDay">
-        <div className="row">
-          <div className="col-md-2 ">
-           <div>{day()}</div>
-           <WeatherIcon code={props.data.weather[0].icon} size={30}/>
+           <div className="weekday">{day()}</div>
+           <div className="mt-2 mb-2"><WeatherIcon code={props.data.weather[0].icon} size={30}/></div>
            <span className="forecastInfo-temp-max">{Math.round(props.data.temp.max)}º</span>
            <span className="forecastInfo-temp-min">{Math.round(props.data.temp.min)}º</span>
           </div>
-        </div>
-       </div>
     );
 }

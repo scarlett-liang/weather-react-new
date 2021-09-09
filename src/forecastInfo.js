@@ -8,14 +8,21 @@ export default function ForecastInfo(props){
     const [loaded,setLoaded]=useState(false);
     const [forecastDay,setForecastDay]=useState(null);
     function showForecast(response){
-      console.log(response.data.daily[0]);
       setForecastDay(response.data.daily);
       setLoaded(true);
     }
     if (loaded){
         return(
         <div className="ForecastInfo">
-         <ForecastDay data={forecastDay[0]} />
+         <div className="row">
+          {forecastDay.map(function(dailyForecast,index){
+            if (index > 0 && index < 7){
+            return (
+             <div className="col" key={index}>
+               <ForecastDay data={dailyForecast} />
+             </div>);}else {return null}
+          })}
+         </div>
         </div>
     );
     }else {
