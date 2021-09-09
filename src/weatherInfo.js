@@ -2,7 +2,6 @@
 import FormattedDate from "./formattedDate";
 import WeatherIcon from './weatherIcon';
 import TempConvert from './tempConvert';
-import ForecastInfo from "./forecastInfo";
 import './App.css';
 
 export default function WeatherInfo (props){
@@ -25,7 +24,6 @@ export default function WeatherInfo (props){
         </div>
       </div>
       <hr className="mt-2 mb-4" />
-      <ForecastInfo />
-    </div>
+      </div>
     );
 }
