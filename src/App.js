@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <div className="container">
+      <div className="container-md">
       <Forecast defaultCity="Frankfurt" />
       </div>
       <footer className="developer">

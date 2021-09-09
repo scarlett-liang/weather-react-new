@@ -8,21 +8,20 @@ export default function WeatherInfo (props){
         <div className="WeatherInfo">
          <h1>{props.data.city}</h1>
       <div className="row">
-        <div className="col-md-5 img-fluid currentIcon"><WeatherIcon code={props.data.icon} size={64}/></div>
+        <div className="col-md-5 img-fluid currentIcon"><WeatherIcon code={props.data.icon} size={78}/></div>
         <div className="col-md-7 currentWeather">
          <ul className="weatherDetail">
-            <li>
+            <li className="weatherList">
                 <TempConvert temp={props.data.temp} />
             </li>
-            <li className="weatherDescri text-capitalize">{props.data.description}</li>
+            <li className="weatherDescri text-capitalize weatherList">{props.data.description}</li>
             
-             <li className="opacity60">Humidity: <span>{props.data.humidity}</span>%</li>
-             <li className="opacity60">Wind Speed: <span>{props.data.wind}</span>km/h</li>
-             <li className="opacity60">Updated on <FormattedDate date={props.data.date}/></li>
+             <li className="opacity60 weatherList">Humidity: <span>{props.data.humidity}</span>%</li>
+             <li className="opacity60 weatherList">Wind Speed: <span>{props.data.wind}</span>km/h</li>
+             <li className="opacity60 weatherList">Updated on <FormattedDate date={props.data.date}/></li>
             </ul>
         </div>
       </div>
-      <hr className="mt-2 mb-4" />
       </div>
     );
 }
